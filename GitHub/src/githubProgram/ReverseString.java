@@ -9,5 +9,6 @@ public class ReverseString {
 			rev = rev + s.charAt(i);
 		}
 		System.out.println(rev);
+		System.out.println(s.replaceAll(" ", ""));
 	}
 }
