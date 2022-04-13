@@ -1,24 +1,27 @@
 package githubProgram;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class LogicalPrg {
 
 	public void pallindrome() {
 		int a[] = {123,234,332,121,345,434};
-		int r=0;
+		int r = 0;
 		System.out.print("Pallindrome no. : ");
 		for(int i=0; i<a.length; i++) {
 			int s = 0;
-			 int t = a[i];
-			 while(a[i] > 0) {
-				 r = a[i]%10;
-				 s = s*10 + r;
-				 a[i] = a[i]/10;
-			 }
-			 if(s == t) {
-				 System.out.print(t + " ");
-			 }
+			int t = a[i];
+			while(a[i] > 0) {
+				r = a[i]%10;
+				s = s*10 + r;
+				a[i] = a[i]/10;
+			}
+			if(s == t) {
+				System.out.print(t + " ");
+			}
 		}
 		System.out.println();
 	}
@@ -78,6 +81,35 @@ public class LogicalPrg {
 			b = b*i;
 		}
 		System.out.println("Factorial of " + n + "! : " + b);
+	}	
+	public void swapNo() {
+		int a = 100;
+		int b = 200;
+		//not using 3rd variable
+		a = a + b;//300
+		b = a - b;//100
+		a = a - b;
+		System.out.print("a : " + a);
+		System.out.println(" b : " + b); 
+	}
+	public void arrayAsc() {
+		int[] a = {2,4,3,1,5,7,9,8};
+		List l = new ArrayList();
+		Arrays.sort(a);
+		for(int i=0; i<a.length; i++) {
+			l.add(a[i]);
+		}
+		System.out.println(l);
+	}
+	public void swap3() {
+		int d = 100;
+		int e = 200;
+		int c = 0;
+		c = d + e;//300
+		d = c - d;//200
+		e = c - d;//100
+		System.out.print("d : " + d);
+		System.out.println(" e : " + e);
 	}
 	public static void main(String[] args) {
 		LogicalPrg x = new LogicalPrg();
@@ -86,5 +118,8 @@ public class LogicalPrg {
 		x.prime();
 		x.perfect();
 		x.factorial();
+		x.swapNo();
+		x.swap3();
+		x.arrayAsc();
 	}
 }
