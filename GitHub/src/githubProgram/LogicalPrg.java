@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class LogicalPrg {
 
@@ -101,6 +104,7 @@ public class LogicalPrg {
 		}
 		System.out.println(l);
 	}
+	
 	public void swap3() {
 		int d = 100;
 		int e = 200;
@@ -110,6 +114,26 @@ public class LogicalPrg {
 		e = c - d;//100
 		System.out.print("d : " + d);
 		System.out.println(" e : " + e);
+	}
+	public void maxAndMin() {
+		int[] a = {2,33,11,0,-65,345,-98};
+		int max = Integer.MIN_VALUE;
+		int min = Integer.MAX_VALUE;
+		for(int element : a) {
+			if(element > max) {
+				max = element;
+			}
+			if(element < min) {
+				min = element;
+			}
+		}
+		System.out.println("minumum value : " + min);
+		System.out.println("Maximum value : " + max);
+	}
+	public void random() {
+		Random r = new Random();
+		int n = r.nextInt();
+		System.out.println("Random no : " + n);
 	}
 	public static void main(String[] args) {
 		LogicalPrg x = new LogicalPrg();
@@ -121,5 +145,7 @@ public class LogicalPrg {
 		x.swapNo();
 		x.swap3();
 		x.arrayAsc();
+		x.maxAndMin();
+		x.random();
 	}
 }
