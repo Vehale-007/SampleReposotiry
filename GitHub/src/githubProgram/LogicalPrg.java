@@ -135,6 +135,38 @@ public class LogicalPrg {
 		int n = r.nextInt();
 		System.out.println("Random no : " + n);
 	}
+	public void commonNo() {
+		int[] a = {1,3,2,5,4};
+		int[] b = {2,7,9,5,8};
+		System.out.print("Common Element : ");
+		Arrays.sort(a);
+		Arrays.sort(b);
+		for(int i=0; i<a.length; i++) {
+			for(int j=0; j<b.length; j++) {
+				if(a[i] == b[j]) {
+				System.out.print(a[i] + " ");	
+				}
+			}
+		}
+		System.out.println();
+	}
+	public void repeatedNo() {
+		int[] a = {1,2,3,2,4,5,1};
+		Arrays.sort(a);
+		for(int i=0; i<a.length; i++) {
+			int n = a[i];
+			int c = 0;
+			for(int j=0; j<a.length; j++) {
+				if(n == a[j]) {
+					c++;
+					
+				}
+			}
+			if(c == 2) {
+				System.out.print(a[i] + " ");
+			}
+		}
+	}
 	public static void main(String[] args) {
 		LogicalPrg x = new LogicalPrg();
 		x.pallindrome();
@@ -147,5 +179,7 @@ public class LogicalPrg {
 		x.arrayAsc();
 		x.maxAndMin();
 		x.random();
+		x.commonNo();
+		x.repeatedNo();
 	}
 }
