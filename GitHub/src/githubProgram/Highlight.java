@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Highlight {
-
 	static WebDriver d;
 	public void highlight() throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "D:\\VelocityTraning\\SetUp\\ChromeDriver100_SeleniumFile\\chromedriver_win32 (1)\\chromedriver.exe");
@@ -24,7 +23,6 @@ public class Highlight {
 		System.out.println("Webelement is highlighted sucessfully");
 		d.quit();
 	}
-
 	public static void highlightElement(WebElement ele) {
 		JavascriptExecutor j = (JavascriptExecutor)d;   
 		j.executeScript("arguments[0].setAttribute('style','background : green; border: 2px solid red;')", ele);
@@ -33,5 +31,4 @@ public class Highlight {
 		Highlight x = new Highlight();
 		x.highlight();
 	}
-
 }
